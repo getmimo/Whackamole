@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var status = "Storage status:"
+        val total = 64.0
 
 
     }
