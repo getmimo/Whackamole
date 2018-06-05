@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         val total = 64.0
         var used = 64.0
         var cloud = 5.0
-        var freeSpace = total - used
+        var freeSpace = total - used + cloud
 
         used--
 
