@@ -16,6 +16,7 @@
         />
 
     <EditText
+        android:layout_margin="50dp"
         android:hint="Enter a name"
         android:layout_alignParentLeft="true"
         android:id="@+id/input"
