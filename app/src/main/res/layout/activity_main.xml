@@ -7,6 +7,7 @@
 
 
     <Button
+        android:onClick="start"
         android:id="@+id/start"
         android:text="START"
         android:layout_centerInParent="true"
