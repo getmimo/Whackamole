@@ -31,7 +31,14 @@ class MainActivity : AppCompatActivity() {
         if (name.length !in 1..9 ) {
             val popup = "Enter a valid name"
             val toast = Toast.makeText(applicationContext, popup, Toast.LENGTH_SHORT)
+            toast.show()
+        } else {
+            beginGame(name)
         }
+    }
+
+    fun beginGame(name: String) {
+
     }
 
 
