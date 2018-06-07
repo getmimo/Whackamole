@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun next(nextButton : View) {
+    fun next(nextButton: View) {
         val inputText = findViewById<EditText>(R.id.input)
         val text = inputText.text.toString()
         val name = text.trim()
-        if (name.length !in 1..9 ) {
+        if (name.length !in 1..9) {
             val popup = "Enter a valid name"
             val toast = Toast.makeText(applicationContext, popup, Toast.LENGTH_SHORT)
             toast.show()
