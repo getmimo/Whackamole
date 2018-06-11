@@ -1,5 +1,6 @@
 package mimo.com.whackamole
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun beginGame(name: String) {
-
+        startActivity(Intent(this, GameActivity::class.java))
     }
 
 
