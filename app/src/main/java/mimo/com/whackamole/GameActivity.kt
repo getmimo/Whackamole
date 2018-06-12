@@ -13,7 +13,7 @@ class GameActivity : AppCompatActivity() {
     }
 
     fun startGame() {
-        val activeImage = pickImage()
+        val image = pickImage()
     }
 
     fun pickImage() : ImageButton {
