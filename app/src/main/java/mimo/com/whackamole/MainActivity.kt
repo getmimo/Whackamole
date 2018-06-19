@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun beginGame(name: String) {
-        startActivity(Intent(this, GameActivity::class.java))
+
     }
 
 
