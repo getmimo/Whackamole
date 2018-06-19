@@ -8,6 +8,7 @@ import android.widget.ImageButton
 
 class GameActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
@@ -15,6 +16,7 @@ class GameActivity : AppCompatActivity() {
 
     fun startGame() {
         val image = pickImage()
+        clickable(image).start()
     }
 
     fun pickImage() : ImageButton {
@@ -25,4 +27,23 @@ class GameActivity : AppCompatActivity() {
         return randomImage
     }
 
+    fun clickable(image: ImageButton) : CountDownTimer {
+        image.setOnClickListener {
+            image.setImageResource(R.drawable.ic_success)
+        }
+
+        return object : CountDownTimer(1000, 100) {
+
+            override fun onTick(millisUntilFinished: Long) {
+
+            }
+
+            override fun onFinish() {
+                image.setImageResource(R.drawable.ic_inactive)
+                image.setOnClickListener(null)
+                startGame()
+            }
+
+        }
+    }
 }
