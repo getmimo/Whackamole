@@ -1,5 +1,6 @@
 package mimo.com.whackamole
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -20,8 +21,12 @@ class GameActivity : AppCompatActivity() {
     }
 
     fun startGame() {
-        val image = pickImage()
-        clickable(image).start()
+        if(score >= 10) {
+            startActivity(Intent(this, WinActivity::class.java))
+        } else {
+            val image = pickImage()
+            clickable(image).start()
+        }
     }
 
     fun pickImage() : ImageButton {
